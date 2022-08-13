@@ -45,7 +45,12 @@ jobs:
         run: |
           hexo clean
           hexo generate
-          
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: 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
+          publish_dir: ./public
 
       - name: 部署到github pages
         run: |
